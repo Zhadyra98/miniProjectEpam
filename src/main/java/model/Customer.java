@@ -1,4 +1,5 @@
 package model;
+import model.enums.City;
 
 public class Customer {
     private int id ;
@@ -8,18 +9,21 @@ public class Customer {
     private String address;
     private long creditCardNumber;
     private String bankAccount;
+    private final City city;
 
-    public Customer (String lastName, String firstName, String familyName){
+    public Customer(String lastName, String firstName, String familyName, City city){
         this.lastName=lastName;
         this.firstName=firstName;
         this.familyName=familyName;
+        this.city = city;
     }
 
-    public Customer (String lastName, String firstName, String familyName, String address){
+    public Customer(String lastName, String firstName, String familyName, String address, City city){
         this.lastName=lastName;
         this.firstName=firstName;
         this.familyName=familyName;
         this.address = address;
+        this.city = city;
     }
 
     public String getLastName(){
@@ -56,6 +60,10 @@ public class Customer {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getCity(){
+        return city.getValue();
     }
     @Override
     public String toString(){
