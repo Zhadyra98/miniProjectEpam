@@ -22,6 +22,18 @@ public class Customer {
         this.address = address;
     }
 
+    public String getLastName(){
+        return lastName;
+    }
+
+    public String getFirstName(){
+        return firstName;
+    }
+
+    public String getFamilyName(){
+        return familyName;
+    }
+
     public String getBankAccount() {
         return bankAccount;
     }
